@@ -1,0 +1,13 @@
+{
+  "name": "@paxapos/fiscalberry-server",
+  "private": false,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "node lib/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socketio": "^1.0.0"
+  }
+}

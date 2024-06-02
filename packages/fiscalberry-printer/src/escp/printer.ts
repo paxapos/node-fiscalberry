@@ -5,8 +5,9 @@ import {
 	ThermalPrinter,
 } from "node-thermal-printer";
 import { printRemito } from "./commands/remito";
-import { PrinterConfig, ThermalOptions } from "../config";
-import { logger } from "../logger";
+import { PrinterConfig, ThermalOptions } from "./config";
+import * as printerModule from "@thiagoelg/node-printer";
+import { logger } from "./logger";
 
 export enum Commands {
 	"printRemito" = "printRemito",
@@ -79,7 +80,10 @@ export class Printer {
 
 	constructor(private printerConfig: PrinterConfig) {
 		this.__ops = { ...this.__ops, ...printerConfig.ops };
+
 		this.__printer = new ThermalPrinter(this.__ops);
+
+		this.__printer.setPrinterDriver(printerModule);
 	}
 
 	getPrinter(): ThermalPrinter {

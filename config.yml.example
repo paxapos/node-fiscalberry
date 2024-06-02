@@ -1,0 +1,15 @@
+printers:
+  - name: tofile-printer
+    ops:
+      interface: /tmp/impresora1.log
+      characterSet: PC852_LATIN2
+  - name: network-printer
+    ops:
+      interface: tcp://127.0.0.1
+      characterSet: PC852_LATIN2
+  - name: serial-win-printer
+    ops:
+      interface: \COM1
+  - name: default-printer
+    ops:
+      interface: printer:auto

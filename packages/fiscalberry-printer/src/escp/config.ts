@@ -46,7 +46,12 @@ export function save(config: ConfigurationYml): boolean {
 		logger.info("se guardó ok");
 		return true;
 	} catch (e: any) {
-		logger.error("Error saving configuration " + e.message);
+		logger.error(
+			"Error saving configuration " +
+				configPath +
+				" --> Mensaje: " +
+				e.message
+		);
 		return false;
 	}
 }

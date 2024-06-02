@@ -2,6 +2,8 @@
 
 usa dotenv para levantar .env y configurar la libreria para imprimir
 
+basado en libreria https://github.com/Klemen1337/node-thermal-printer
+
 ## se necesita tener la configuracion de yml con las impresoras instaladas
 
 EJemplo:

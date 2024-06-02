@@ -1,7 +1,7 @@
-import { dummyLogger, Logger } from "ts-log";
+import { Logger } from "ts-log";
 import * as fs from "fs";
 
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
 dotenv.config();
 
 const path = process.env.LOG_PATH;
